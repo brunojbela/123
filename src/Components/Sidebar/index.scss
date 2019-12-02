@@ -1,0 +1,49 @@
+@media screen and (min-width: 992px) {
+	.fixed-sidebar {
+		display: block;
+		bottom: 0;
+		background: #0a53a6;
+		position: fixed;
+		width: inherit;
+		height: 100%;
+		margin-left: -16px;
+		z-index: 9999;
+		right: 0;
+
+		&.left {
+			left: 0;
+			right: auto;
+		}
+	}
+	.fixed-sidebar--content {
+		padding: 40px 10px;
+		text-align: center;
+	}
+	.fixed-sidebar--content img {
+		display: inline-block;
+	}
+	.fixed-sidebar--content p {
+		font-size: 26px;
+		color: #fff;
+		margin: 40px 0;
+		line-height: 2;
+	}
+	.fixed-sidebar--content .button-sticky {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	.fixed-sidebar--content .button-sticky:hover {
+		background: #fff044;
+		text-decoration: none;
+	}
+	.fixed-sidebar--content .button-sticky:focus {
+		text-decoration: none;
+	}
+}
+
+.sidebar-item {
+	&.active {
+		font-family: 'Suadrconsulta-Bold';
+	}
+}

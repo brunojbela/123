@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/loja/static/css/main.7b5d94df.chunk.css",
+    "main.js": "/loja/static/js/main.e0c2fa6e.chunk.js",
+    "main.js.map": "/loja/static/js/main.e0c2fa6e.chunk.js.map",
+    "runtime~main.js": "/loja/static/js/runtime~main.534e5c36.js",
+    "runtime~main.js.map": "/loja/static/js/runtime~main.534e5c36.js.map",
+    "static/js/2.140572aa.chunk.js": "/loja/static/js/2.140572aa.chunk.js",
+    "static/js/2.140572aa.chunk.js.map": "/loja/static/js/2.140572aa.chunk.js.map",
+    "index.html": "/loja/index.html",
+    "precache-manifest.de09002ba4ca04a6dcf7e608cfd3af3d.js": "/loja/precache-manifest.de09002ba4ca04a6dcf7e608cfd3af3d.js",
+    "service-worker.js": "/loja/service-worker.js",
+    "static/css/main.7b5d94df.chunk.css.map": "/loja/static/css/main.7b5d94df.chunk.css.map",
+    "static/media/index.scss": "/loja/static/media/yalo-symbol.1da4fff5.svg",
+    "static/media/app-store.e366313a.svg": "/loja/static/media/app-store.e366313a.svg",
+    "static/media/cartao.png": "/loja/static/media/cartao.907c9ee6.png",
+    "static/media/cinema.ef1cdb2c.svg": "/loja/static/media/cinema.ef1cdb2c.svg",
+    "static/media/cursos.c1f07413.svg": "/loja/static/media/cursos.c1f07413.svg",
+    "static/media/drconsulta-white.68bfdcea.svg": "/loja/static/media/drconsulta-white.68bfdcea.svg",
+    "static/media/drconsulta.4fc996e7.svg": "/loja/static/media/drconsulta.4fc996e7.svg",
+    "static/media/eletrodomesticos.8843a614.svg": "/loja/static/media/eletrodomesticos.8843a614.svg",
+    "static/media/google-play.e6255656.svg": "/loja/static/media/google-play.e6255656.svg",
+    "static/media/icon-c-1.23a22fee.svg": "/loja/static/media/icon-c-1.23a22fee.svg",
+    "static/media/icon-c-2.311a316e.svg": "/loja/static/media/icon-c-2.311a316e.svg",
+    "static/media/icon-c-3.3e0985b1.svg": "/loja/static/media/icon-c-3.3e0985b1.svg",
+    "static/media/img-1.jpg": "/loja/static/media/img-1.0d0b9433.jpg",
+    "static/media/logo-yalo.eccf6cf7.svg": "/loja/static/media/logo-yalo.eccf6cf7.svg"
+  }
+}
