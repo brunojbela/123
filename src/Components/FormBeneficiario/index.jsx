@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import InputMask from 'react-input-mask';
 import cpfCheck from 'cpf-check';
@@ -86,6 +87,19 @@ class FormBeneficiario extends Component {
 		return errorMsgs[name];
 	}
 
+	checkIfcpfExist = value => {
+		const { Subscription } = this.props;
+		let isValid = []
+		if(Subscription && Subscription.data && Subscription.data.itens.length > 0){
+			isValid = Subscription.data.itens.reduce((acc, cur) => {
+				if(cur.cpf === value) acc.push(cur.cpf)
+				return acc
+			}, [])
+		}
+		return !!(isValid.length === 0)
+	}
+
+
 	checkField(name, value) {
 		let isValidField = false;
 		let checkField = {
@@ -99,7 +113,7 @@ class FormBeneficiario extends Component {
 
 		if (checkField[name].test(value)) {
 			if (name === 'cpf') {
-				isValidField = cpfCheck.validate(value);
+				isValidField = cpfCheck.validate(value) && this.checkIfcpfExist(value.replace(/(\.|\/|\-)/g,""))
 			} else if (name === 'birthday') {
 				let dateValue = moment(value, 'DD/MM/YYYY');
 				let currentDate = moment();
@@ -318,6 +332,8 @@ class FormBeneficiario extends Component {
 	}
 }
 
-export default FormBeneficiario;
+const mapStateToProps = ({ Subscription }) => ({
+	Subscription
+});
 
-
+export default connect(mapStateToProps, () => {})(FormBeneficiario);
