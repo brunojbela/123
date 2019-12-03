@@ -17,8 +17,6 @@ class Beneficiario extends Component {
 	constructor() {
 		super();
 
-
-
 		this.formData = this.formData.bind(this);
 		this.formSend = this.formSend.bind(this);
 		this.errorAccept = this.errorAccept.bind(this);
@@ -91,3 +89,7 @@ export default connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(Beneficiario);
+
+
+
+

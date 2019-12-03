@@ -5,7 +5,7 @@ import cpfCheck from 'cpf-check';
 import moment from 'moment';
 
 class FormBeneficiario extends Component {
-
+    
 	constructor() {
 		super();
 
@@ -66,7 +66,7 @@ class FormBeneficiario extends Component {
 						/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/i,
 						'$3/$2/$1'
 					);
-          break;
+                    break;
 				default:
 			}
 		}
@@ -77,7 +77,6 @@ class FormBeneficiario extends Component {
 		let errorMsgs = {
 			name: 'Nome inválido',
 			cpf: 'CPF inválido',
-      cpfDuplicate: 'Beneficiário em duplicidade',
 			phone: 'Telefone inválido',
 			birthday: 'Data de nascimento inválida',
 			gender: 'Gênero inválido',
@@ -86,7 +85,6 @@ class FormBeneficiario extends Component {
 
 		return errorMsgs[name];
 	}
-
 
 	checkField(name, value) {
 		let isValidField = false;
@@ -107,7 +105,7 @@ class FormBeneficiario extends Component {
 				let currentDate = moment();
 				let passLimitDate = moment().subtract(115, 'years');
 				isValidField = dateValue.isBetween(passLimitDate, currentDate);
-			}
+			} 
             else {
 				isValidField = true;
 			}
@@ -150,19 +148,17 @@ class FormBeneficiario extends Component {
 
 		return text;
 	}
-
 	getData() {
 		let inputData = this.state.inputData;
 
 		let dataSend = {};
-
 		for (var fieldName in inputData) {
 			if (this.checkField(fieldName, inputData[fieldName])) {
 				let value = inputData[fieldName];
 				if (fieldName === 'name') {
 					value = this.removeAcento(value);
-				}
 
+				}
 				dataSend[fieldName] = {
 					error: false,
 					value
@@ -176,8 +172,6 @@ class FormBeneficiario extends Component {
 		}
 
 		return dataSend;
-
-
 	}
 	render() {
 		let fieldError = '';
@@ -199,8 +193,6 @@ class FormBeneficiario extends Component {
 		}
 
 		this.props.onData(this.getData());
-		this.props.onData(this.state.inputData.cpf);
-    console.log(this.props);
 
 		return (
 			<div className='col-xs-12 col-md-offset-3 col-md-9'>
@@ -327,3 +319,5 @@ class FormBeneficiario extends Component {
 }
 
 export default FormBeneficiario;
+
+

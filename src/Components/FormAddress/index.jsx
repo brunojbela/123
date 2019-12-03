@@ -71,7 +71,7 @@ class FormAddress extends Component {
 		let fieldChecked = false;
 		let checkField = {
 			cep: /^[0-9]{5}-[0-9]{3}$/i,
-			address: /^([A-Za-z0-9çãàáâéêíóôõúÂÃÁÀÉÊÍÓÔÕÚÇ()"'!?$%:;,º°ª.-_-]+\s?){1,100}$/i,
+			address: /^([A-Za-z0-9çãàáâéêíóôõúÂÃÁÀÉÊÍÓÔÕÚÇ()"'!?$%:;,º°ª]+\s?){1,100}$/i,
 			district: /^([^\d\s]+\s?){1,30}$/i,
 			number: /^[0-9]{1,8}$/i,
 			city: /^([^\d\s]+\s?){1,30}$/i,

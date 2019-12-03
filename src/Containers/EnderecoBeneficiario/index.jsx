@@ -100,7 +100,7 @@ class EnderecoCobranca extends Component {
 						Address.data.itens[subscriptionIndex].addressId,
 						subscriptionData
 					);
-					console.log(this.props.addSubscription);
+
 					this.props.history.push(process.env.PUBLIC_URL + '/carrinho');
 				} else if (
 					!Order.data.orderId &&
@@ -214,3 +214,4 @@ export default connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(EnderecoCobranca);
+
